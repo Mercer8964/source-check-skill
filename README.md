@@ -61,6 +61,15 @@ cp openclaw/SKILL.md ~/.openclaw/skills/source-check/SKILL.md
 
 Uses `sessions_spawn` with `context: "isolated"` for verifier independence. Cross-family setup is easiest here via `agents.list[].subagents.model`.
 
+### Cowork (Claude Code plugin)
+
+Cowork mode reads from the plugin system, not `~/.claude/skills/`. This repo also publishes as a marketplace — add it then install:
+
+```bash
+/plugin marketplace add Mercer8964/source-check-skill
+/plugin install source-check@source-check-skill
+```
+
 ---
 
 ## How it works
